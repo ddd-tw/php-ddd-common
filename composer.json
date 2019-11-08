@@ -1,0 +1,20 @@
+{
+    "name": "ddd-tw/php-ddd-common",
+    "description": "This is a PHP Domain-Driven Design common lib including abstract classes and interfaces",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric G. Huang",
+            "email": "eric.g.yuan@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "DDDTW\\DDD\\Common\\": "src/"
+        }
+    }
+}
