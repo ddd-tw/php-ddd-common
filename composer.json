@@ -12,7 +12,8 @@
     "require": {
         "php": "^7.1",
         "phpunit/phpunit": "^8.4",
-        "mockery/mockery": "^1.2"
+        "mockery/mockery": "^1.2",
+        "ramsey/uuid": "^3.8"
     },
     "autoload": {
         "psr-4": {

@@ -5,20 +5,24 @@ declare(strict_types=1);
 namespace DDDTW\DDD\Common;
 
 use DateTime;
-use Illuminate\Support\Str;
+use Exception;
+use Ramsey\Uuid\Uuid;
 
 abstract class DomainEvent
 {
     protected $eventId;
     protected $occuredDate;
 
+    /**
+     * DomainEvent constructor.
+     * @param DateTime|null $occuredDate
+     * @throws Exception
+     */
     public function __construct(?DateTime $occuredDate = null)
     {
-        $this->eventId = $this->generateEventId();
+        $this->eventId = Uuid::uuid4()->toString();
         $this->occuredDate = $occuredDate ?? new DateTime();
     }
-
-    abstract public function generateEventId(): string;
 
     abstract public function getDerivedEventEqualityComponents(): array;
 
