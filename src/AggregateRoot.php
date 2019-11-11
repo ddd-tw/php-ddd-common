@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DDDTW\DDD\Common;
 
-class AggregateRoot
+abstract class AggregateRoot extends Entity
 {
 
 }
