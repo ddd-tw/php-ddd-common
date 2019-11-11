@@ -12,6 +12,17 @@ abstract class EntityId extends ValueObject
     protected $seqNo;
     protected $occuredDate;
 
+    /**
+     * Returning a string as a prefix for the implementing class
+     * When you call the toString method, it will use this string as a prefix for the identity
+     *
+     * Example:
+     *   // if: public function getAbbr(): string { return 'order'}
+     *   $seq = 0;
+     *   $orderId = new OrderId($seq, new DateTime());
+     *   $orderId->toString(); // output: "order-20190101-0"
+     * @return string
+     */
     abstract public function getAbbr(): string;
 
     public function __construct(int $seqNo, DateTime $occuredDate)
