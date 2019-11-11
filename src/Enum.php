@@ -9,6 +9,21 @@ use ReflectionClass;
 use ReflectionException;
 use UnexpectedValueException;
 
+/**
+ * Class Enum
+ *
+ * This is just a simple Enum class only has minimum methods for practicing
+ *
+ * Example:
+ *   class OrderStatus extends Enum
+ *   {
+ *       private const Initial = 0;
+ *       private const Processing = 1;
+ *   }
+ *
+ *   OrderStatus::Initial(); // return OrderStatus
+ *   $orderStatus->getValue() // return 0
+ */
 abstract class Enum
 {
     protected static $cache = [];
